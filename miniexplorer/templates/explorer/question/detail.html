@@ -1,0 +1,11 @@
+{% extends "explorer/base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ question.title }}</h1>
+<p class="date">
+    Published {{ question.publish }} by {{ question.author }}
+</p>
+    {{ question.sql|linebreaks }}
+{% endblock %}
